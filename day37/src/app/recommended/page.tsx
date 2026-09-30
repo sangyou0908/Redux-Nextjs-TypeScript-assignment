@@ -27,7 +27,7 @@ const recommendedMovies: RecommendedMovie[] = [
     vote_average: 8.2,
     reason:
       "혼자보면 무서울 수 있습니다... 기묘하고 긴장감 넘치는걸 좋아한다면 추천합니다. 묫자리를 잘못 건드려서 생기는 기묘한 스토리.. 넘 재밌어서 시간가는줄 모르고 봤네요",
-    badge: "심약자 주의",
+    badge: "⚠️ 심약자 주의",
   },
 ];
 
