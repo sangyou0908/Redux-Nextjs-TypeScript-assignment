@@ -19,7 +19,7 @@ export default function RecommendedMovieCard({
           : "포스터 이미지가 없습니다"}
       </p>
       <span className={styles.badge}>
-        {movie.badge !== null ? movie.badge : "일반 추천"}
+        {movie.badge !== undefined ? movie.badge : "일반 추천"}
       </span>
     </article>
   );
