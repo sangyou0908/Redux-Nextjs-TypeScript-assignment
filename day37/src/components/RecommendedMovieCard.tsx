@@ -1,4 +1,5 @@
 import type { RecommendedMovie } from "@/types/recommendedMovie";
+import styles from "./RecommendedMovieCard.module.css";
 
 type RecommendedMovieCardProps = {
   movie: RecommendedMovie;
@@ -6,7 +7,7 @@ type RecommendedMovieCardProps = {
 
 export default function RecommendedMovieCard() {
   return (
-    <article>
+    <article className={style.card}>
       <h2>{movie.title}</h2>
       <p>{movie.vote_average}</p>
       <p>{movie.reason}</p>
