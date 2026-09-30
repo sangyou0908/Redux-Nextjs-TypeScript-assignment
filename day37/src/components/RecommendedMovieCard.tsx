@@ -5,9 +5,11 @@ type RecommendedMovieCardProps = {
   movie: RecommendedMovie;
 };
 
-export default function RecommendedMovieCard() {
+export default function RecommendedMovieCard({
+  movie,
+}: RecommendedMovieCardProps) {
   return (
-    <article className={style.card}>
+    <article className={styles.card}>
       <h2>{movie.title}</h2>
       <p>{movie.vote_average}</p>
       <p>{movie.reason}</p>
