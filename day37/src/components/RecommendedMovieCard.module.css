@@ -4,3 +4,10 @@
   border-radius: 8px;
   background: #ffffff;
 }
+
+.badge {
+  background: #007bff;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 999px;
+}

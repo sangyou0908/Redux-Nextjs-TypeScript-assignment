@@ -18,7 +18,9 @@ export default function RecommendedMovieCard({
           ? movie.poster_path
           : "포스터 이미지가 없습니다"}
       </p>
-      <p>{movie.badge !== null ? movie.badge : "일반 추천"}</p>
+      <span className={styles.badge}>
+        {movie.badge !== null ? movie.badge : "일반 추천"}
+      </span>
     </article>
   );
 }
