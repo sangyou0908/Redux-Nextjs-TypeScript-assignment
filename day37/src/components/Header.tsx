@@ -1,0 +1,17 @@
+import Link from "next/link";
+import styles from "./Header.module.css";
+
+export default function Header() {
+  return (
+    <header className={styles.header}>
+      <h1>Movie App</h1>
+
+      <nav className={styles.nav}>
+        <Link href="/">Home</Link>
+        <Link href="/movies">Movies</Link>
+        <Link href="/about">About</Link>
+        <Link href="/recommended">Recommended</Link>
+      </nav>
+    </header>
+  );
+}
