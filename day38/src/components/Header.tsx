@@ -9,6 +9,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <Link href="/">Home</Link>
         <Link href="/movies">Movies</Link>
+        <Link href="/top-rated">Top Rated</Link>
         <Link href="/about">About</Link>
       </nav>
     </header>
