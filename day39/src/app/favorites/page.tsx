@@ -7,6 +7,7 @@ import styles from "./FavoritesPage.module.css";
 
 export default function FavoritesPage() {
   // TODO 3. useFavorites()로 favorites 배열을 가져오세요.
+  const { favorites } = useFavorites();
 
   return (
     <main className={styles.page}>
