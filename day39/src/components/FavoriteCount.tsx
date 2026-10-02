@@ -4,7 +4,7 @@ import { useFavorites } from "@/contexts/FavoritesContext";
 import styles from "./Header.module.css";
 
 export default function FavoriteCount() {
-  const { favorites } = useFavorites();
+  const { favorites, setFavorites } = useFavorites();
 
   return (
     <span className={styles.favoriteCount} aria-live="polite">
