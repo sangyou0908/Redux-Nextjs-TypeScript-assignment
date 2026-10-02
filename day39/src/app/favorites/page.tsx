@@ -20,11 +20,19 @@ export default function FavoritesPage() {
         그 외에는 favorites.map()으로 MovieCard 목록을 보여주세요.
         key에는 movie.id, movie Props에는 movie를 전달합니다.
       */}
-      <div className={styles.empty}>
-        <p>여기에 찜한 영화 목록을 표시해 주세요.</p>
-        <Link href="/movies" className={styles.browse}>
-          영화 보러 가기
-        </Link>
+      <div>
+        {favorites.length === 0 ? (
+          <div className={styles.empty}>
+            <p>아직 찜한 영화가 없습니다.</p>
+            <Link href="/movies" className={styles.browse}>
+              영화 보러 가기
+            </Link>
+          </div>
+        ) : (
+          favorites.map((favorite) => (
+            <MovieCard key={favorite.id} movie={favorite} />
+          ))
+        )}
       </div>
     </main>
   );
