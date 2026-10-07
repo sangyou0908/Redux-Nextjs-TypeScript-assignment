@@ -1,8 +1,6 @@
 import "server-only";
-import type {
-  MovieDetail,
-  MovieListResponse,
-} from "@/types/movie";
+import type { MovieDetail, MovieListResponse } from "@/types/movie";
+import { notFound } from "next/navigation";
 
 const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -20,7 +18,7 @@ export async function getPopularMovies() {
         Authorization: `Bearer ${token}`,
         accept: "application/json",
       },
-    }
+    },
   );
 
   if (!response.ok) {
@@ -39,17 +37,17 @@ export async function getMovieDetail(movieId: string) {
     throw new Error("TMDB_TOKEN이 설정되지 않았습니다.");
   }
 
-  const response = await fetch(
-    `${BASE_URL}/movie/${movieId}?language=ko-KR`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        accept: "application/json",
-      },
-    }
-  );
+  const response = await fetch(`${BASE_URL}/movie/${movieId}?language=ko-KR`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      accept: "application/json",
+    },
+  });
 
   // TODO: 404 응답은 일반 Error와 구분하여 처리합니다.
+  if (response.status === 404) {
+    notFound();
+  }
 
   if (!response.ok) {
     throw new Error("영화 상세 정보를 불러오지 못했습니다.");
