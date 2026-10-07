@@ -4,12 +4,12 @@ import { useCounterStore } from "@/stores/counterStore";
 
 export default function Home() {
   // TODO 4. Store에서 count를 가져오세요.
-  const count = 0;
+  const count = useCounterStore((state) => state.count);
 
   // TODO 5. Store에서 increase, decrease, reset 함수를 각각 가져오세요.
-  const increase = () => {};
-  const decrease = () => {};
-  const reset = () => {};
+  const increase = useCounterStore((state) => state.increase);
+  const decrease = useCounterStore((state) => state.decrease);
+  const reset = useCounterStore((state) => state.reset);
 
   return (
     <main className="container">
