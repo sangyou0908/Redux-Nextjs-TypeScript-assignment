@@ -13,6 +13,10 @@ export default async function MovieDetailPage({
   // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { id } = await params;
+
+  // 영화 상세페이지 Error 화면 확인용(확인 후 삭제 필요)
+  throw new Error("Error UI 확인용 오류");
+
   const movie = await getMovieDetail(id);
 
   return (
