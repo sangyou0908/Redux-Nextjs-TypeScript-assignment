@@ -10,7 +10,7 @@ export default async function MovieDetailPage({
   params,
 }: MovieDetailPageProps) {
   // 영화 상세페이지 loading 화면 확인용(Delay 코드이며, 확인 후 삭제 필요)
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { id } = await params;
   const movie = await getMovieDetail(id);
